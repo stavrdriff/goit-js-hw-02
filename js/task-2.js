@@ -1,10 +1,6 @@
 'use strict';
 
-const formatMessage = (message, maxLength) => {
-  return message && maxLength && maxLength > 0 && message.length > maxLength
-    ? message.slice(0, maxLength) + '...'
-    : message; 
-}
+const formatMessage = (message, maxLength) => message && maxLength && maxLength > 0 && message.length > maxLength ? message.slice(0, maxLength) + '...' : message; 
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
 console.log(formatMessage("Curabitur ligula sapien", 23)); // "Curabitur ligula sapien"
